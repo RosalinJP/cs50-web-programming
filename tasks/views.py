@@ -14,6 +14,9 @@ class NewTaskForm(forms.Form):
 
 def index (request):
     # return HttpResponse("This is the Tasks app homepage.")
+    if "tasks" not in request.session:
+        request.session["tasks"]=[]
+       
     return render(request,"tasks/index.html",{
         "tasks":tasks
     })

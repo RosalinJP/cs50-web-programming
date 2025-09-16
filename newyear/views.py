@@ -8,5 +8,3 @@ def index (request):
         "newyear" : now.day==1 and now.month==1 
     })
 
-def add(request):
-    return render(request,"tasks/add.html")
